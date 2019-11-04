@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <ngx-xlsx-file-upload [valueKeyObject]="valueJson" (onSuccess)="onSuccess($event)"></ngx-xlsx-file-upload>
+  <input ngXlsxFileSelect type="file" (onSuccess)="onSuccess($event)" (onError)="onError($event)">
+  <div style="height: 100px;" ngXlsxFileDrop (onSuccess)="onSuccess($event)" (onError)="onError($event)">
+    <p>drop</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div id="dropZone" ngXlsxFileDrop [valueKeyObject]="valueKeyObject"
+     (onError)="onResultError($event)"
+     (onSuccess)="onResultSuccess($event)"
+     (click)="selectFile()">
+    <input type="file" id="file-input" ngXlsxFileSelect [valueKeyObject]="valueKeyObject"
+           #fileSelectInput [hidden]="true"
+           (onError)="onResultError($event)"
+           (onSuccess)="onResultSuccess($event)">
+    <div class="content">
+        <ng-content></ng-content>
+        {{placeholder}}
+    </div>
+</div>
