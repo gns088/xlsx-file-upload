@@ -10,7 +10,7 @@ export class XlsxFileUploadService {
         return new Observable((observer) => {
             const selectedFile = file.item(0);
             const extension = this.getFileExtension(selectedFile.name);
-            if (extension && extension === 'xlsx') {
+            if (extension && (extension === 'xlsx' || extension === 'csv')) {
                 try {
                     let arrayBuffer;
                     const fileReader = new FileReader();
